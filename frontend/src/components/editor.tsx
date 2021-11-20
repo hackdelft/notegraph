@@ -3,7 +3,7 @@ import { useState } from "preact/hooks";
 import MDEditor from "@uiw/react-md-editor";
 
 export default function App() {
-    const [value, setValue] = useState("**Hello world!!!**");
+    const [value, setValue] = useState(window.location.pathname);
     return (
         <div className="container">
             <MDEditor
@@ -11,7 +11,7 @@ export default function App() {
                 onChange={setValue}
                 height={600}
             />
-            {/* <MDEditor.Markdown source={value} /> */}
+            <p></p>
         </div>
     );
 }
