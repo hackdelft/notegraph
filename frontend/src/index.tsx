@@ -6,16 +6,15 @@ if (process.env.NODE_ENV === "development") {
     import("preact/debug");
 }
 
-import Editor from "/src/components/editor";
+import Main from "/src/pages/main";
 import { h, render } from "preact";
 
 import "./global.scss";
-
 /**
  * Start the application.
  */
 const start = (): void => {
-    render(<Editor />, document.body);
+    render(<Main />, document.body);
 };
 
 /**
