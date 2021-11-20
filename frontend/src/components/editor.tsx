@@ -9,7 +9,7 @@ export default function App() {
             <MDEditor
                 value={value}
                 onChange={setValue}
-                fullscreen
+                height={600}
             />
             {/* <MDEditor.Markdown source={value} /> */}
         </div>
