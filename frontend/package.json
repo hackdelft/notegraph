@@ -1,0 +1,45 @@
+{
+    "name": "notegraph",
+    "version": "0.1.0",
+    "repository": "https://github.com/hackdelft/notegraph",
+    "author": "HackDelft 2021-2022",
+    "browserslist": "> 0.5%, last 2 versions, not dead",
+    "license": "GPL-3.0",
+    "private": true,
+    "type": "module",
+    "sideEffects": [
+        "./index.tsx",
+        "./global.scss"
+    ],
+    "alias": {
+        "react": "preact/compat",
+        "react-dom": "preact/compat"
+    },
+    "scripts": {
+        "start": "parcel -p 8000 ./src/index.html",
+        "build": "yarn clear-cache && parcel build ./src/index.html",
+        "serve": "yarn build && http-server ./dist -p 8000 -g -b",
+        "analyse": "yarn clear-cache && PARCEL_BUNDLE_ANALYZER=true parcel build src/index.html --reporter @parcel/reporter-bundle-analyzer",
+        "lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx ./src",
+        "clear-cache": "rm -rf dist .parcel-cache parcel-bundle-reports"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.16.0",
+        "@babel/plugin-transform-react-jsx": "^7.16.0",
+        "@parcel/reporter-bundle-analyzer": "^2.0.1",
+        "@parcel/transformer-sass": "^2.0.1",
+        "@types/parcel-env": "^0.0.1",
+        "@typescript-eslint/eslint-plugin": "^5.4.0",
+        "@typescript-eslint/parser": "^5.4.0",
+        "autoprefixer": "^10.4.0",
+        "eslint": "^8.2.0",
+        "eslint-config-prettier": "^8.3.0",
+        "http-server": "^14.0.0",
+        "parcel": "^2.0.1",
+        "postcss": "^8.3.11",
+        "typescript": "^4.5.2"
+    },
+    "dependencies": {
+        "preact": "^10.5.15"
+    }
+}
