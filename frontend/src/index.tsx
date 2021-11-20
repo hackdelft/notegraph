@@ -6,6 +6,7 @@ if (process.env.NODE_ENV === "development") {
     import("preact/debug");
 }
 
+import Editor from "/src/components/editor";
 import { h, render } from "preact";
 
 import "./global.scss";
@@ -14,7 +15,7 @@ import "./global.scss";
  * Start the application.
  */
 const start = (): void => {
-    render(<h1>Hello Notegraph!</h1>, document.body);
+    render(<Editor />, document.body);
 };
 
 /**
